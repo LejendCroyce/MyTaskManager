@@ -1,0 +1,56 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager LogIn</title>
+    <link
+      rel="shortcut icon"
+      href="{%static 'favicon.ico'%}"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="logoContainer">
+          <span>T O D O</span>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.8244 0.166024C8.14853 0.922784 5.38462 4.17708 5.38462 8.07692C5.38462 12.5377 9.00078 16.1538 13.4615 16.1538C15.766 16.1538 17.8451 15.1887 19.3166 13.6406C17.8608 17.3633 14.2383 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C10.6231 0 11.2328 0.0569837 11.8244 0.166024Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+        <div class="addTodoContainer">
+          <p>Log In Details</p>
+        </div>
+      </header>
+      <section>
+        <p>
+          Are you a new user <br />
+          Please fill out this form
+        </p>
+        <form action=" <str:lastname>/<str:firstname> " method="post">
+          {% csrf_token %}
+          <label for="">First Name:</label><br />
+          <input type="text" name="userFirstName" id="" /><br />
+          <label for="">Last Name:</label><br />
+          <input type="text" name="userLastName" id="" /><br />
+          <label for="">Email Address:</label><br />
+          <input type="email" name="userEmail" id="" /><br />
+          <input type="submit" value="Log In" />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
